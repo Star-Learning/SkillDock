@@ -1,0 +1,4 @@
+interface:
+  display_name: "Draw.io 论文配图"
+  short_description: "生成可编辑的 Draw.io 论文结构图"
+  default_prompt: "使用 $drawio-paper-figure，根据我提供的参考图重建可编辑的 Draw.io 论文配图，并导出 PNG 和 SVG 预览。"

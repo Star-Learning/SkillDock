@@ -1,0 +1,4 @@
+interface:
+  display_name: "文献调研 Related Work"
+  short_description: "产出篇幅受控的中英双语投稿级综述与 BibTeX"
+  default_prompt: "使用 $literature-related-work 调研气象降尺度的近期高质量论文，写成适用于 CCF-A 会议投稿的精简中英双语单段 Related Work，中文不超过 400 个汉字、英文不超过 180 个词，引用保持一致，并生成 Scholar BibTeX。"

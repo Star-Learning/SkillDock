@@ -1,0 +1,13 @@
+{
+  "id": "literature-related-work",
+  "displayName": "文献调研 Related Work",
+  "version": "1.0.0",
+  "category": "学术研究",
+  "summary": "覆盖近期高质量论文，生成可选中英双语、篇幅受控的投稿级 Related Work 与 Google Scholar BibTeX。",
+  "status": "beta",
+  "source": "本地维护",
+  "tags": ["文献调研", "Related Work", "真实引用", "BibTeX", "CCF-A", "中科院一区"],
+  "compatibility": ["Codex"],
+  "requirements": ["可访问 Google Scholar", "可访问论文官方页面或 DOI 记录", "本地文件读写权限"],
+  "testMode": "structure-and-trigger"
+}

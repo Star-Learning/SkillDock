@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-08-11T06:40:37.784Z",
+  "generatedAt": "2026-08-11T14:09:23.776Z",
   "summary": {
-    "total": 2,
+    "total": 4,
     "installed": 0,
     "needsSync": 0,
-    "passing": 2
+    "passing": 4
   },
   "targets": [
     {
@@ -16,6 +16,175 @@
     }
   ],
   "skills": [
+    {
+      "id": "drawio-paper-figure",
+      "displayName": "Draw.io 论文配图",
+      "version": "1.0.0",
+      "category": "学术研究",
+      "summary": "根据参考图生成可编辑 Draw.io 论文配图，并导出 PNG、SVG、PDF 或 HTML。",
+      "status": "beta",
+      "source": "本地维护",
+      "tags": [
+        "科研绘图",
+        "论文配图",
+        "Draw.io",
+        "可编辑图",
+        "模型结构图",
+        "流程图"
+      ],
+      "compatibility": [
+        "Codex",
+        "Draw.io Desktop",
+        "app.diagrams.net"
+      ],
+      "requirements": [
+        "本地文件读写权限",
+        "可选 Draw.io Desktop（用于本地导出）"
+      ],
+      "testMode": "structure-and-trigger",
+      "name": "drawio-paper-figure",
+      "description": "Rebuild scientific paper figures from reference images or existing diagrams as native, editable draw.io .drawio XML, then validate and export PNG, SVG, PDF, HTML, or JSON previews. Use when the user asks for论文配图、模型结构图、流程图、架构图、图片转可编辑图、Draw.io绘图、修改图表配色或布局; do not use for ordinary image editing, data plotting from raw numeric tables, or flat screenshot insertion.",
+      "directory": "skills/drawio-paper-figure",
+      "installTarget": ".agents/skills/drawio-paper-figure",
+      "installStatus": "not-installed",
+      "sourceChecksum": "d804381e1074c17d42f35f0b3412edce9d6ead46d545fdd40a0e78bea7995d0d",
+      "fileCount": 8,
+      "sourceBytes": 19433,
+      "tests": {
+        "status": "passed",
+        "passed": 7,
+        "total": 7,
+        "promptCases": 9,
+        "checks": [
+          {
+            "id": "metadata",
+            "label": "平台元数据",
+            "passed": true
+          },
+          {
+            "id": "skill-file",
+            "label": "SKILL.md",
+            "passed": true
+          },
+          {
+            "id": "name",
+            "label": "名称一致",
+            "passed": true
+          },
+          {
+            "id": "description",
+            "label": "触发描述",
+            "passed": true
+          },
+          {
+            "id": "version",
+            "label": "语义化版本",
+            "passed": true
+          },
+          {
+            "id": "trigger-cases",
+            "label": "触发测试样例",
+            "passed": true,
+            "count": 9
+          },
+          {
+            "id": "security",
+            "label": "文件安全扫描",
+            "passed": true
+          }
+        ]
+      },
+      "package": {
+        "fileName": "drawio-paper-figure-v1.0.0.zip",
+        "path": "/skills/drawio-paper-figure/drawio-paper-figure-v1.0.0.zip",
+        "bytes": 11630,
+        "sha256": "de4dabd7d996ffd3d01742e7a8b9e2342a7bfd54786970ce2ee0a27c013d477d"
+      }
+    },
+    {
+      "id": "literature-related-work",
+      "displayName": "文献调研 Related Work",
+      "version": "1.0.0",
+      "category": "学术研究",
+      "summary": "覆盖近期高质量论文，生成可选中英双语、篇幅受控的投稿级 Related Work 与 Google Scholar BibTeX。",
+      "status": "beta",
+      "source": "本地维护",
+      "tags": [
+        "文献调研",
+        "Related Work",
+        "真实引用",
+        "BibTeX",
+        "CCF-A",
+        "中科院一区"
+      ],
+      "compatibility": [
+        "Codex"
+      ],
+      "requirements": [
+        "可访问 Google Scholar",
+        "可访问论文官方页面或 DOI 记录",
+        "本地文件读写权限"
+      ],
+      "testMode": "structure-and-trigger",
+      "name": "literature-related-work",
+      "description": "Research a user-supplied academic topic and turn verified real papers into a cited Related Work section plus a Google Scholar-sourced BibTeX file. Use when the user asks for 文献调研、研究现状、相关工作、related work、论文综述、真实引用、refs.bib, especially when they require CCF-A or 中科院一区 papers and no fabricated references.",
+      "directory": "skills/literature-related-work",
+      "installTarget": ".agents/skills/literature-related-work",
+      "installStatus": "not-installed",
+      "sourceChecksum": "54d5a4a25459333e80c03ec39279ace7b544eb3373decc37f8ab55f347cd73b1",
+      "fileCount": 6,
+      "sourceBytes": 19127,
+      "tests": {
+        "status": "passed",
+        "passed": 7,
+        "total": 7,
+        "promptCases": 11,
+        "checks": [
+          {
+            "id": "metadata",
+            "label": "平台元数据",
+            "passed": true
+          },
+          {
+            "id": "skill-file",
+            "label": "SKILL.md",
+            "passed": true
+          },
+          {
+            "id": "name",
+            "label": "名称一致",
+            "passed": true
+          },
+          {
+            "id": "description",
+            "label": "触发描述",
+            "passed": true
+          },
+          {
+            "id": "version",
+            "label": "语义化版本",
+            "passed": true
+          },
+          {
+            "id": "trigger-cases",
+            "label": "触发测试样例",
+            "passed": true,
+            "count": 11
+          },
+          {
+            "id": "security",
+            "label": "文件安全扫描",
+            "passed": true
+          }
+        ]
+      },
+      "package": {
+        "fileName": "literature-related-work-v1.0.0.zip",
+        "path": "/skills/literature-related-work/literature-related-work-v1.0.0.zip",
+        "bytes": 10419,
+        "sha256": "6f9c402bf0b8fd2ade9dbc7522f684c08e36a6c58bc696eb53345f4e106e9d84"
+      }
+    },
     {
       "id": "paper-wechat-article-generator",
       "displayName": "论文公众号文章生成器",
@@ -100,7 +269,7 @@
     {
       "id": "research2story",
       "displayName": "Research2Story",
-      "version": "1.0.1",
+      "version": "1.0.0",
       "category": "学术研究",
       "summary": "调研并核验论文，为每篇论文提取真实主图，生成带旁白的 HTML 研究时间线。",
       "status": "beta",
@@ -125,7 +294,7 @@
       "directory": "skills/research2story",
       "installTarget": ".agents/skills/research2story",
       "installStatus": "not-installed",
-      "sourceChecksum": "32c9057cf59b085aa16a1b5f76eb10469bbd58ca9b1c2ed5195b41a51a000fe7",
+      "sourceChecksum": "c51cdbb49c5a8667de1ebb8f10898694d163a1e555833b0d031ea5733179004a",
       "fileCount": 23,
       "sourceBytes": 127879,
       "tests": {
@@ -173,10 +342,10 @@
         ]
       },
       "package": {
-        "fileName": "research2story-v1.0.1.zip",
-        "path": "/skills/research2story/research2story-v1.0.1.zip",
+        "fileName": "research2story-v1.0.0.zip",
+        "path": "/skills/research2story/research2story-v1.0.0.zip",
         "bytes": 49393,
-        "sha256": "641f15d7cd255701c05f3eaddf95ae5cf4446b9b394b2d5234695a6558a57ad2"
+        "sha256": "1bce799e5b23c2a85141732929c6ef043b01f4bd59a895e9919adbd1ba290ab7"
       }
     }
   ]

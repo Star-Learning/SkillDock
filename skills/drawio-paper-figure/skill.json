@@ -1,0 +1,13 @@
+{
+  "id": "drawio-paper-figure",
+  "displayName": "Draw.io 论文配图",
+  "version": "1.0.0",
+  "category": "学术研究",
+  "summary": "根据参考图生成可编辑 Draw.io 论文配图，并导出 PNG、SVG、PDF 或 HTML。",
+  "status": "beta",
+  "source": "本地维护",
+  "tags": ["科研绘图", "论文配图", "Draw.io", "可编辑图", "模型结构图", "流程图"],
+  "compatibility": ["Codex", "Draw.io Desktop", "app.diagrams.net"],
+  "requirements": ["本地文件读写权限", "可选 Draw.io Desktop（用于本地导出）"],
+  "testMode": "structure-and-trigger"
+}
