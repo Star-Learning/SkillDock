@@ -48,11 +48,11 @@ function parseVenueConfig(source: string): VenueConfig {
 
 async function loadVenueConfig() {
   const localPath = resolve(process.cwd(), "config", "venues.yaml");
-  const integratedPath = resolve(process.cwd(), "solutions", "research", "research2story", "config", "venues.yaml");
+  const repositoryPath = resolve(process.cwd(), "skills", "research2story", "config", "venues.yaml");
   try {
     return parseVenueConfig(await readFile(localPath, "utf8"));
   } catch {
-    return parseVenueConfig(await readFile(integratedPath, "utf8"));
+    return parseVenueConfig(await readFile(repositoryPath, "utf8"));
   }
 }
 

@@ -10,7 +10,7 @@ import { getSkillStatsSnapshot, recordSiteEvent, recordSkillEvent } from "./lib/
 
 const projectRoot = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const outputRoot = resolve(projectRoot, "out");
-const publicRegistryPath = resolve(projectRoot, "data", "generated", "skills.json");
+const publicRegistryPath = resolve(outputRoot, "skill-registry.json");
 const siteHost = process.env.SITE_HOST || "127.0.0.1";
 const sitePort = Number.parseInt(process.env.SITE_PORT || "3000", 10);
 const downloadBaseUrl = (process.env.SKILLDOCK_DOWNLOAD_BASE_URL || "").replace(/\/$/, "");

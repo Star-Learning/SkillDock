@@ -18,7 +18,10 @@
 !.env.example
 /solutions/_trash/
 /skills/_trash/
+/\.agents/skills/
 /data/local/
+/public/skill-registry.json
+/public/skills/
 /runtime-data/
 
 # logs

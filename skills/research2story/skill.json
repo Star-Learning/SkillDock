@@ -1,7 +1,7 @@
 {
   "id": "research2story",
   "displayName": "Research2Story",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "category": "学术研究",
   "summary": "调研并核验论文，为每篇论文提取真实主图，生成带旁白的 HTML 研究时间线。",
   "status": "beta",

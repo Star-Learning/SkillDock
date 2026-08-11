@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-08-11T06:12:31.990Z",
+  "generatedAt": "2026-08-11T06:40:37.784Z",
   "summary": {
     "total": 2,
-    "installed": 1,
+    "installed": 0,
     "needsSync": 0,
     "passing": 2
   },
@@ -12,7 +12,7 @@
       "name": "Codex · 当前项目",
       "path": ".agents/skills",
       "scope": "repository",
-      "installed": 1
+      "installed": 0
     }
   ],
   "skills": [
@@ -42,7 +42,7 @@
       "description": "Convert a research paper PDF into a Chinese WeChat official-account style Markdown article, with a sibling pics/ directory containing cropped individual paper figures/tables referenced by the Markdown. Use when the user provides a paper PDF and asks for a 公众号文章、论文解读、论文精读、paper reading、Markdown article, or md + pics output.",
       "directory": "skills/paper-wechat-article-generator",
       "installTarget": ".agents/skills/paper-wechat-article-generator",
-      "installStatus": "current",
+      "installStatus": "not-installed",
       "sourceChecksum": "9b102d2f37f2bb3649ea1192bba8bc56879e3f685b16ab30304cc7f8ed8f9fd2",
       "fileCount": 4,
       "sourceBytes": 23601,
@@ -100,7 +100,7 @@
     {
       "id": "research2story",
       "displayName": "Research2Story",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "category": "学术研究",
       "summary": "调研并核验论文，为每篇论文提取真实主图，生成带旁白的 HTML 研究时间线。",
       "status": "beta",
@@ -125,9 +125,9 @@
       "directory": "skills/research2story",
       "installTarget": ".agents/skills/research2story",
       "installStatus": "not-installed",
-      "sourceChecksum": "763ff6ac4cef82fe8ed2b916db85d2e1ca7a0b981513ec6b891511531ae7f05e",
+      "sourceChecksum": "32c9057cf59b085aa16a1b5f76eb10469bbd58ca9b1c2ed5195b41a51a000fe7",
       "fileCount": 23,
-      "sourceBytes": 127894,
+      "sourceBytes": 127879,
       "tests": {
         "status": "passed",
         "passed": 7,
@@ -173,10 +173,10 @@
         ]
       },
       "package": {
-        "fileName": "research2story-v1.0.0.zip",
-        "path": "/skills/research2story/research2story-v1.0.0.zip",
-        "bytes": 49398,
-        "sha256": "288ac07369dfeb6ac1856f5bda7cf8feac2e6e2cb1e143fc52118f802ec5a8e1"
+        "fileName": "research2story-v1.0.1.zip",
+        "path": "/skills/research2story/research2story-v1.0.1.zip",
+        "bytes": 49393,
+        "sha256": "641f15d7cd255701c05f3eaddf95ae5cf4446b9b394b2d5234695a6558a57ad2"
       }
     }
   ]

@@ -5,6 +5,7 @@ import { collectSkillFiles, projectRoot, scanSkillRegistry, skillsRoot } from ".
 import { createZipBuffer } from "./lib/zip.mjs";
 
 const publicRoot = resolve(projectRoot, "public", "skills");
+const publicRegistryPath = resolve(projectRoot, "public", "skill-registry.json");
 const skills = await scanSkillRegistry();
 const activeIds = new Set(skills.map((skill) => skill.id));
 
@@ -60,4 +61,16 @@ const generated = {
 const generatedPath = resolve(projectRoot, "data", "generated", "skills.json");
 await mkdir(dirname(generatedPath), { recursive: true });
 await writeFile(generatedPath, `${JSON.stringify(generated, null, 2)}\n`, "utf8");
+
+function toPublicSkill(skill) {
+  const publicSkill = { ...skill };
+  for (const key of ["directory", "installTarget", "installStatus", "sourceChecksum", "sourceBytes"]) delete publicSkill[key];
+  return publicSkill;
+}
+
+const publicGenerated = {
+  generatedAt: generated.generatedAt,
+  skills: generated.skills.map(toPublicSkill),
+};
+await writeFile(publicRegistryPath, `${JSON.stringify(publicGenerated, null, 2)}\n`, "utf8");
 console.log(`Synced ${skills.length} skills. ${generated.summary.installed} installed, ${generated.summary.needsSync} need sync.`);

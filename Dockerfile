@@ -23,7 +23,6 @@ WORKDIR /app
 RUN mkdir -p /data && chown node:node /data
 
 COPY --from=builder --chown=node:node /app/out ./out
-COPY --from=builder --chown=node:node /app/data/generated ./data/generated
 COPY --from=builder --chown=node:node /app/scripts ./scripts
 
 USER node

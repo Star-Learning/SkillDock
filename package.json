@@ -12,6 +12,8 @@
     "skills:sync": "node scripts/sync-skills.mjs",
     "predev": "node scripts/sync-skills.mjs",
     "dev": "next dev",
+    "prelint": "node scripts/sync-skills.mjs",
+    "pretypecheck": "node scripts/sync-skills.mjs",
     "prebuild": "node scripts/sync-skills.mjs",
     "build": "next build",
     "start": "node scripts/serve-static.mjs",
