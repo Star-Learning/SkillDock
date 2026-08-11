@@ -1,0 +1,11 @@
+{
+  "id": "paper-unpacked",
+  "slug": "paper-unpacked",
+  "stage": "draft",
+  "category": "research",
+  "implementationType": "hybrid",
+  "title": "拆解论文真正的工作与叙事套路",
+  "summary": "对比实际技术增量与论文故事，提取研究流程、叙事结构和可复用方法。",
+  "priority": "medium",
+  "source": "历史聊天：AI 论文研究书房"
+}

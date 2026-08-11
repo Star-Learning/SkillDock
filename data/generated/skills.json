@@ -1,0 +1,183 @@
+{
+  "generatedAt": "2026-08-11T05:23:23.860Z",
+  "summary": {
+    "total": 2,
+    "installed": 1,
+    "needsSync": 0,
+    "passing": 2
+  },
+  "targets": [
+    {
+      "id": "codex-repo",
+      "name": "Codex · 当前项目",
+      "path": ".agents/skills",
+      "scope": "repository",
+      "installed": 1
+    }
+  ],
+  "skills": [
+    {
+      "id": "paper-wechat-article-generator",
+      "displayName": "论文公众号文章生成器",
+      "version": "1.0.0",
+      "category": "内容创作",
+      "summary": "读取论文 PDF、裁剪关键图表，生成可发布的中文公众号 Markdown 文章。",
+      "status": "stable",
+      "source": "本地维护",
+      "tags": [
+        "论文解读",
+        "公众号",
+        "Markdown",
+        "PDF"
+      ],
+      "compatibility": [
+        "Codex"
+      ],
+      "requirements": [
+        "论文 PDF",
+        "本地文件读写权限"
+      ],
+      "testMode": "structure-and-trigger",
+      "name": "paper-wechat-article-generator",
+      "description": "Convert a research paper PDF into a Chinese WeChat official-account style Markdown article, with a sibling pics/ directory containing cropped individual paper figures/tables referenced by the Markdown. Use when the user provides a paper PDF and asks for a 公众号文章、论文解读、论文精读、paper reading、Markdown article, or md + pics output.",
+      "directory": "skills/paper-wechat-article-generator",
+      "installTarget": ".agents/skills/paper-wechat-article-generator",
+      "installStatus": "current",
+      "sourceChecksum": "9b102d2f37f2bb3649ea1192bba8bc56879e3f685b16ab30304cc7f8ed8f9fd2",
+      "fileCount": 4,
+      "sourceBytes": 23601,
+      "tests": {
+        "status": "passed",
+        "passed": 7,
+        "total": 7,
+        "promptCases": 5,
+        "checks": [
+          {
+            "id": "metadata",
+            "label": "平台元数据",
+            "passed": true
+          },
+          {
+            "id": "skill-file",
+            "label": "SKILL.md",
+            "passed": true
+          },
+          {
+            "id": "name",
+            "label": "名称一致",
+            "passed": true
+          },
+          {
+            "id": "description",
+            "label": "触发描述",
+            "passed": true
+          },
+          {
+            "id": "version",
+            "label": "语义化版本",
+            "passed": true
+          },
+          {
+            "id": "trigger-cases",
+            "label": "触发测试样例",
+            "passed": true,
+            "count": 5
+          },
+          {
+            "id": "security",
+            "label": "文件安全扫描",
+            "passed": true
+          }
+        ]
+      },
+      "package": {
+        "fileName": "paper-wechat-article-generator-v1.0.0.zip",
+        "path": "/skills/paper-wechat-article-generator/paper-wechat-article-generator-v1.0.0.zip",
+        "bytes": 11525,
+        "sha256": "8f52961408b154b77fd74969f0ccde7728c0d2c08a55e65f304e6517ddb34358"
+      }
+    },
+    {
+      "id": "research2story",
+      "displayName": "Research2Story",
+      "version": "1.0.0",
+      "category": "学术研究",
+      "summary": "调研并核验论文，为每篇论文提取真实主图，生成带旁白的 HTML 研究时间线。",
+      "status": "beta",
+      "source": "本地维护",
+      "tags": [
+        "文献调研",
+        "论文时间线",
+        "主图提取",
+        "HTML 动画"
+      ],
+      "compatibility": [
+        "Codex"
+      ],
+      "requirements": [
+        "Node.js 20+",
+        "npm",
+        "公开学术数据源网络"
+      ],
+      "testMode": "structure-and-trigger",
+      "name": "research2story",
+      "description": "Research and verify papers for a user-supplied topic, extract a real representative figure for every included paper, and generate a local Markdown report plus a narrated HTML research timeline. Use when the user asks for 文献调研、论文时间线、研究脉络、论文主图动画、Research2Story, or a research-to-HTML story and wants the work executed in their local Agent workspace.",
+      "directory": "skills/research2story",
+      "installTarget": ".agents/skills/research2story",
+      "installStatus": "not-installed",
+      "sourceChecksum": "763ff6ac4cef82fe8ed2b916db85d2e1ca7a0b981513ec6b891511531ae7f05e",
+      "fileCount": 23,
+      "sourceBytes": 127894,
+      "tests": {
+        "status": "passed",
+        "passed": 7,
+        "total": 7,
+        "promptCases": 5,
+        "checks": [
+          {
+            "id": "metadata",
+            "label": "平台元数据",
+            "passed": true
+          },
+          {
+            "id": "skill-file",
+            "label": "SKILL.md",
+            "passed": true
+          },
+          {
+            "id": "name",
+            "label": "名称一致",
+            "passed": true
+          },
+          {
+            "id": "description",
+            "label": "触发描述",
+            "passed": true
+          },
+          {
+            "id": "version",
+            "label": "语义化版本",
+            "passed": true
+          },
+          {
+            "id": "trigger-cases",
+            "label": "触发测试样例",
+            "passed": true,
+            "count": 5
+          },
+          {
+            "id": "security",
+            "label": "文件安全扫描",
+            "passed": true
+          }
+        ]
+      },
+      "package": {
+        "fileName": "research2story-v1.0.0.zip",
+        "path": "/skills/research2story/research2story-v1.0.0.zip",
+        "bytes": 49398,
+        "sha256": "288ac07369dfeb6ac1856f5bda7cf8feac2e6e2cb1e143fc52118f802ec5a8e1"
+      }
+    }
+  ]
+}

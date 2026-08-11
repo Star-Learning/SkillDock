@@ -1,0 +1,32 @@
+# dependencies
+/node_modules
+/.pnpm-store
+/.pnp
+.pnp.*
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# local files
+.DS_Store
+*.pem
+.env*
+!.env.example
+/solutions/_trash/
+/skills/_trash/
+/data/local/
+/runtime-data/
+
+# logs
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.codex-*.log
+
+# typescript
+*.tsbuildinfo

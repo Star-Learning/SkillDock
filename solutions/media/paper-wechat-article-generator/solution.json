@@ -1,0 +1,80 @@
+{
+  "id": "paper-wechat-article-generator",
+  "slug": "paper-wechat-article-generator",
+  "stage": "ready",
+  "category": "media",
+  "implementationType": "skill",
+  "title": "把一篇论文 PDF 变成可发布的公众号解读文章",
+  "shortTitle": "论文 PDF 生成公众号文章",
+  "summary": "让 Codex 读取论文、裁剪关键图表，并生成结构清晰的中文 Markdown 文章与 pics 图片目录。",
+  "delivery": {
+    "mode": "agent-local",
+    "version": "1.0.0",
+    "packageFileName": "paper-wechat-article-generator-v1.0.0.zip",
+    "agents": ["Codex"],
+    "requires": ["Codex", "本地论文 PDF", "本地文件读写权限"]
+  },
+  "featured": true,
+  "featuredOrder": 1,
+  "verificationStatus": "reference",
+  "lastTested": "2026-08-07",
+  "difficulty": 2,
+  "setupMinutes": 5,
+  "recommendedStack": ["Codex", "论文 PDF", "Markdown"],
+  "apps": ["Codex", "PDF", "Markdown"],
+  "toolSlugs": ["codex"],
+  "tags": ["公众号", "论文解读", "Markdown", "Skill"],
+  "aliases": ["论文转公众号", "论文精读", "paper reading", "微信文章"],
+  "icon": "file-text",
+  "accent": "purple",
+  "repository": {
+    "type": "embedded",
+    "location": ".",
+    "note": "Skill 资源与方案说明保存在当前目录。"
+  },
+  "guide": {
+    "inputs": [
+      { "name": "论文 PDF", "description": "文章事实和图片的主要来源。", "required": true },
+      { "name": "输出目录", "description": "用于保存文章、原论文和图片。", "required": true },
+      { "name": "论文链接与代码", "description": "有就提供，没有可以留空。", "required": false },
+      { "name": "发表时间", "description": "有助于生成准确的文章信息。", "required": false }
+    ],
+    "usageSteps": [
+      { "title": "下载并解压方案包", "description": "完整包包含 SKILL.md、方案说明和所需资源。" },
+      { "title": "使用 Codex 打开目录", "description": "把解压后的 paper-wechat-article-generator 文件夹作为本地工作区打开。" },
+      { "title": "附上论文 PDF", "description": "新建 Codex 任务，提供论文文件和期望的输出目录。" },
+      { "title": "复制指令并运行", "description": "修改可选信息后发送下方指令，由 Agent 在本地裁图和写作。" }
+    ],
+    "outputs": [
+      { "name": "article.md", "description": "可继续编辑和排版的中文公众号文章。" },
+      { "name": "pics/", "description": "3–5 张从论文中裁剪的关键图表。" },
+      { "name": "paper.pdf", "description": "与文章一起保留的论文原文。" }
+    ],
+    "flow": [
+      { "title": "读取论文", "description": "以 PDF 为事实依据" },
+      { "title": "梳理重点", "description": "提炼背景、方法和结论" },
+      { "title": "选择图表", "description": "裁剪关键 figure / table" },
+      { "title": "撰写文章", "description": "组织成公众号阅读结构" },
+      { "title": "检查交付", "description": "核对数字、图片和路径" }
+    ],
+    "prompt": {
+      "purpose": "把 PDF 和输出目录替换成自己的信息后直接发送。",
+      "content": "请使用 $paper-wechat-article-generator Skill，把我附上的论文 PDF 写成一篇中文公众号解读文章。\n\n输出目录：<填写目录>\n论文链接：<可选>\n代码仓库：<可选>\n发表时间：<可选>\n\n请只使用 PDF 中能够确认的事实，裁剪 3–5 张关键图表，并输出 article.md、paper.pdf 和 pics/。完成后按 Skill 的检查清单自检。"
+    }
+  },
+  "resources": [
+    {
+      "id": "paper-wechat-article-generator-skill-free",
+      "name": "论文公众号文章撰写 Skill",
+      "platform": "Codex",
+      "resourceType": "skill",
+      "version": "1.0.0",
+      "source": "resources/SKILL.md",
+      "fileName": "SKILL.md",
+      "installAsSkill": true,
+      "lastTested": "2026-08-07",
+      "requires": ["Codex", "论文 PDF", "本地文件写入权限"],
+      "changeLog": ["迁移到独立解决方案目录", "保留固定文章结构与事实校验规则", "提供项目级与全局安装方式"]
+    }
+  ]
+}

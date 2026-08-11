@@ -1,0 +1,48 @@
+ccf_a:
+  - CVPR
+  - ICCV
+  - ECCV
+  - NeurIPS
+  - ICML
+  - ICLR
+  - ACL
+  - AAAI
+  - IJCAI
+  - KDD
+  - SIGIR
+  - WWW
+  - SIGMOD
+  - VLDB
+  - OSDI
+  - SOSP
+  - Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition
+  - Proceedings of the IEEE/CVF International Conference on Computer Vision
+  - Advances in Neural Information Processing Systems
+  - International Conference on Machine Learning
+  - International Conference on Learning Representations
+  - Proceedings of the AAAI Conference on Artificial Intelligence
+  - Annual Meeting of the Association for Computational Linguistics
+
+cas_q1:
+  - IEEE Transactions on Pattern Analysis and Machine Intelligence
+  - International Journal of Computer Vision
+  - IEEE Transactions on Neural Networks and Learning Systems
+  - IEEE Transactions on Image Processing
+  - Journal of Machine Learning Research
+  - Artificial Intelligence
+  - Information Fusion
+  - ISPRS Journal of Photogrammetry and Remote Sensing
+  - Remote Sensing of Environment
+
+recognized:
+  - ACM Multimedia
+  - EMNLP
+  - NAACL
+  - COLING
+  - WACV
+  - BMVC
+  - AISTATS
+  - UAI
+  - CoRL
+  - ICRA
+  - IROS

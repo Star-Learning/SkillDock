@@ -1,0 +1,11 @@
+{
+  "id": "claim-evidence-auditor",
+  "slug": "claim-evidence-auditor",
+  "stage": "draft",
+  "category": "research",
+  "implementationType": "skill",
+  "title": "检查论文主张是否有实验支撑",
+  "summary": "建立贡献、实验、指标和结论之间的对应关系，发现证据缺口。",
+  "priority": "high",
+  "source": "历史聊天：论文写作 Skills"
+}

@@ -1,0 +1,12 @@
+.git
+.next
+out
+node_modules
+.pnpm-store
+runtime-data
+data/local
+.agents
+solutions
+docs
+*.log
+.env*

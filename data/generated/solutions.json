@@ -1,0 +1,407 @@
+[
+  {
+    "id": "paper-wechat-article-generator",
+    "slug": "paper-wechat-article-generator",
+    "stage": "ready",
+    "category": "media",
+    "implementationType": "skill",
+    "title": "把一篇论文 PDF 变成可发布的公众号解读文章",
+    "shortTitle": "论文 PDF 生成公众号文章",
+    "summary": "让 Codex 读取论文、裁剪关键图表，并生成结构清晰的中文 Markdown 文章与 pics 图片目录。",
+    "delivery": {
+      "mode": "agent-local",
+      "version": "1.0.0",
+      "packageFileName": "paper-wechat-article-generator-v1.0.0.zip",
+      "agents": [
+        "Codex"
+      ],
+      "requires": [
+        "Codex",
+        "本地论文 PDF",
+        "本地文件读写权限"
+      ],
+      "packageBytes": 12609,
+      "sha256": "18ce9afd9d830863b4498da6f8ba31bd53c977b8367bce076189736eb7a82b59"
+    },
+    "featured": true,
+    "featuredOrder": 1,
+    "verificationStatus": "reference",
+    "lastTested": "2026-08-07",
+    "difficulty": 2,
+    "setupMinutes": 5,
+    "recommendedStack": [
+      "Codex",
+      "论文 PDF",
+      "Markdown"
+    ],
+    "apps": [
+      "Codex",
+      "PDF",
+      "Markdown"
+    ],
+    "toolSlugs": [
+      "codex"
+    ],
+    "tags": [
+      "公众号",
+      "论文解读",
+      "Markdown",
+      "Skill"
+    ],
+    "aliases": [
+      "论文转公众号",
+      "论文精读",
+      "paper reading",
+      "微信文章"
+    ],
+    "icon": "file-text",
+    "accent": "purple",
+    "repository": {
+      "type": "embedded",
+      "location": ".",
+      "note": "Skill 资源与方案说明保存在当前目录。"
+    },
+    "guide": {
+      "inputs": [
+        {
+          "name": "论文 PDF",
+          "description": "文章事实和图片的主要来源。",
+          "required": true
+        },
+        {
+          "name": "输出目录",
+          "description": "用于保存文章、原论文和图片。",
+          "required": true
+        },
+        {
+          "name": "论文链接与代码",
+          "description": "有就提供，没有可以留空。",
+          "required": false
+        },
+        {
+          "name": "发表时间",
+          "description": "有助于生成准确的文章信息。",
+          "required": false
+        }
+      ],
+      "usageSteps": [
+        {
+          "title": "下载并解压方案包",
+          "description": "完整包包含 SKILL.md、方案说明和所需资源。"
+        },
+        {
+          "title": "使用 Codex 打开目录",
+          "description": "把解压后的 paper-wechat-article-generator 文件夹作为本地工作区打开。"
+        },
+        {
+          "title": "附上论文 PDF",
+          "description": "新建 Codex 任务，提供论文文件和期望的输出目录。"
+        },
+        {
+          "title": "复制指令并运行",
+          "description": "修改可选信息后发送下方指令，由 Agent 在本地裁图和写作。"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "article.md",
+          "description": "可继续编辑和排版的中文公众号文章。"
+        },
+        {
+          "name": "pics/",
+          "description": "3–5 张从论文中裁剪的关键图表。"
+        },
+        {
+          "name": "paper.pdf",
+          "description": "与文章一起保留的论文原文。"
+        }
+      ],
+      "flow": [
+        {
+          "title": "读取论文",
+          "description": "以 PDF 为事实依据"
+        },
+        {
+          "title": "梳理重点",
+          "description": "提炼背景、方法和结论"
+        },
+        {
+          "title": "选择图表",
+          "description": "裁剪关键 figure / table"
+        },
+        {
+          "title": "撰写文章",
+          "description": "组织成公众号阅读结构"
+        },
+        {
+          "title": "检查交付",
+          "description": "核对数字、图片和路径"
+        }
+      ],
+      "prompt": {
+        "purpose": "把 PDF 和输出目录替换成自己的信息后直接发送。",
+        "content": "请使用 $paper-wechat-article-generator Skill，把我附上的论文 PDF 写成一篇中文公众号解读文章。\n\n输出目录：<填写目录>\n论文链接：<可选>\n代码仓库：<可选>\n发表时间：<可选>\n\n请只使用 PDF 中能够确认的事实，裁剪 3–5 张关键图表，并输出 article.md、paper.pdf 和 pics/。完成后按 Skill 的检查清单自检。"
+      }
+    },
+    "resources": [
+      {
+        "id": "paper-wechat-article-generator-skill-free",
+        "name": "论文公众号文章撰写 Skill",
+        "platform": "Codex",
+        "resourceType": "skill",
+        "version": "1.0.0",
+        "source": "resources/SKILL.md",
+        "fileName": "SKILL.md",
+        "installAsSkill": true,
+        "lastTested": "2026-08-07",
+        "requires": [
+          "Codex",
+          "论文 PDF",
+          "本地文件写入权限"
+        ],
+        "changeLog": [
+          "迁移到独立解决方案目录",
+          "保留固定文章结构与事实校验规则",
+          "提供项目级与全局安装方式"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "claim-evidence-auditor",
+    "slug": "claim-evidence-auditor",
+    "stage": "draft",
+    "category": "research",
+    "implementationType": "skill",
+    "title": "检查论文主张是否有实验支撑",
+    "summary": "建立贡献、实验、指标和结论之间的对应关系，发现证据缺口。",
+    "priority": "high",
+    "source": "历史聊天：论文写作 Skills"
+  },
+  {
+    "id": "literature-benchmark-scout",
+    "slug": "literature-benchmark-scout",
+    "stage": "draft",
+    "category": "research",
+    "implementationType": "agent",
+    "agentMode": "multi",
+    "title": "调研领域文献、Benchmark 与开源代码",
+    "summary": "围绕研究问题检索现有工作，整理方法谱系、代码底座和仍未解决的空位。",
+    "priority": "medium",
+    "source": "历史聊天：遥感 Benchmark 调研"
+  },
+  {
+    "id": "paper-to-slides",
+    "slug": "paper-to-slides",
+    "stage": "draft",
+    "category": "research",
+    "implementationType": "skill",
+    "title": "把论文 PDF 变成中文汇报 PPT",
+    "summary": "提取论文主线、关键图表和讲解顺序，输出可以继续修改的演示文稿。",
+    "priority": "high",
+    "source": "历史聊天：论文做成 PPT"
+  },
+  {
+    "id": "paper-unpacked",
+    "slug": "paper-unpacked",
+    "stage": "draft",
+    "category": "research",
+    "implementationType": "hybrid",
+    "title": "拆解论文真正的工作与叙事套路",
+    "summary": "对比实际技术增量与论文故事，提取研究流程、叙事结构和可复用方法。",
+    "priority": "medium",
+    "source": "历史聊天：AI 论文研究书房"
+  },
+  {
+    "id": "proof-and-publishing",
+    "slug": "proof-and-publishing",
+    "stage": "draft",
+    "category": "research",
+    "implementationType": "skill",
+    "title": "处理校样 AQ、出版协议与编辑邮件",
+    "summary": "解释出版流程问题，检查填写项，并生成简洁准确的英文回复。",
+    "priority": "high",
+    "source": "历史聊天：校样与出版流程"
+  },
+  {
+    "id": "research-idea-canvas",
+    "slug": "research-idea-canvas",
+    "stage": "draft",
+    "category": "research",
+    "implementationType": "agent",
+    "agentMode": "multi",
+    "title": "从研究主题生成可推演的 Idea 架构",
+    "summary": "把研究张力、文献缺口、方法分支、审稿质疑和实验设计放在同一条演化链上。",
+    "priority": "high",
+    "source": "历史聊天：论文 Idea 架构工具"
+  },
+  {
+    "id": "submission-materials",
+    "slug": "submission-materials",
+    "stage": "draft",
+    "category": "research",
+    "implementationType": "skill",
+    "title": "生成并检查投稿配套材料",
+    "summary": "整理 Cover Letter、Author Statement、TL;DR、Checklist 与作者信息。",
+    "priority": "high",
+    "source": "历史聊天：投稿材料填写"
+  },
+  {
+    "id": "submission-pdf-preflight",
+    "slug": "submission-pdf-preflight",
+    "stage": "draft",
+    "category": "research",
+    "implementationType": "workflow",
+    "title": "投稿 PDF 字数、页数与格式体检",
+    "summary": "在正式投稿前检查字数、页数、匿名信息、图表和常见格式风险。",
+    "priority": "high",
+    "source": "历史聊天：PDF 字数与投稿格式"
+  },
+  {
+    "id": "research2story",
+    "slug": "research2story",
+    "stage": "ready",
+    "category": "research",
+    "implementationType": "hybrid",
+    "title": "让 AI Agent 把论文调研做成带主图与旁白的时间轴动画",
+    "shortTitle": "Research2Story",
+    "summary": "下载方案包后交给本地 AI Agent，自动检索并核验论文、逐篇提取真实代表图，生成带时间轴与旁白的 HTML 研究动画。",
+    "delivery": {
+      "mode": "agent-local",
+      "version": "1.0.0",
+      "packageFileName": "research2story-v1.0.0.zip",
+      "agents": [
+        "Codex"
+      ],
+      "requires": [
+        "Node.js 20+",
+        "npm",
+        "可访问公开学术数据源的网络"
+      ],
+      "packageBytes": 50815,
+      "sha256": "8ec007f0b37e59437001b73f70095d06b7ad212b7129f4d465b257b5ea52b76a"
+    },
+    "featured": true,
+    "featuredOrder": 2,
+    "verificationStatus": "partial",
+    "lastTested": "2026-08-10",
+    "difficulty": 2,
+    "setupMinutes": 2,
+    "recommendedStack": [
+      "OpenAlex",
+      "arXiv / ar5iv",
+      "Next.js",
+      "Browser Speech"
+    ],
+    "apps": [
+      "OpenAlex",
+      "arXiv",
+      "浏览器",
+      "Markdown"
+    ],
+    "toolSlugs": [
+      "codex"
+    ],
+    "tags": [
+      "文献调研",
+      "研究脉络",
+      "Storyboard",
+      "学术科研"
+    ],
+    "aliases": [
+      "research story",
+      "文献综述",
+      "论文时间线",
+      "research2story"
+    ],
+    "icon": "route",
+    "accent": "green",
+    "repository": {
+      "type": "embedded",
+      "location": ".",
+      "note": "核心实现保存在当前解决方案目录，主应用只提供路由入口。"
+    },
+    "guide": {
+      "inputs": [
+        {
+          "name": "研究主题",
+          "description": "例如 AI Agent Memory，唯一必填项。",
+          "required": true
+        },
+        {
+          "name": "时间范围",
+          "description": "默认近 5 年，也可以自定义起止年份。",
+          "required": false
+        },
+        {
+          "name": "输出语言",
+          "description": "支持中文或 English。",
+          "required": false
+        }
+      ],
+      "usageSteps": [
+        {
+          "title": "下载并解压方案包",
+          "description": "完整方案包含 SKILL.md、执行脚本、本地界面和配置文件。"
+        },
+        {
+          "title": "使用 Codex 打开目录",
+          "description": "把解压后的 research2story 文件夹作为一个本地工作区打开。"
+        },
+        {
+          "title": "复制任务指令",
+          "description": "修改研究主题和时间范围后，把下方指令发送给 Codex。"
+        },
+        {
+          "title": "由 Agent 在本地执行",
+          "description": "Agent 安装所需依赖、运行检索和主图提取，并把成果保存到 outputs/。"
+        },
+        {
+          "title": "查看本地成果",
+          "description": "打开 research.md 或 index.html，检查论文来源、图片和时间线动画。"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "research.md",
+          "description": "包含阶段、路线、论文主图与已核验参考文献的报告。"
+        },
+        {
+          "name": "index.html",
+          "description": "内嵌论文主图，沿时间轴自动播放并使用浏览器语音旁白的独立页面。"
+        }
+      ],
+      "flow": [
+        {
+          "title": "扩展检索",
+          "description": "围绕主题建立多组查询"
+        },
+        {
+          "title": "筛选论文",
+          "description": "优先高质量 Venue 与最新工作"
+        },
+        {
+          "title": "核验信息",
+          "description": "检查作者、年份、DOI 与正式链接"
+        },
+        {
+          "title": "提取主图",
+          "description": "逐篇识别并保存真实模型结构图、框架图或流程图"
+        },
+        {
+          "title": "梳理脉络",
+          "description": "识别阶段、路线和代表论文"
+        },
+        {
+          "title": "生成故事",
+          "description": "输出报告、Storyboard 与动画页面"
+        }
+      ],
+      "prompt": {
+        "purpose": "也可以直接把需求交给 Codex 执行。",
+        "content": "请先阅读当前目录中的 SKILL.md，并使用 Research2Story 方案调研主题 <填写主题>。时间范围：<开始年份>—<结束年份>；输出语言：中文。请优先高质量 Venue，明确标记 arXiv 预印本，为每篇入选论文提取一张真实代表图，并把 research.md、storyboard.json 和可独立播放的 index.html 保存到 outputs/。"
+      }
+    },
+    "resources": []
+  }
+]

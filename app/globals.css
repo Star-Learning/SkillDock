@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .input {
+    @apply h-11 w-full rounded-xl border border-line bg-white px-3 text-sm text-ink outline-none transition placeholder:text-ink/25 focus:border-moss/40 focus:ring-2 focus:ring-moss/10;
+  }
+}
+
+:root {
+  color-scheme: light;
+}
+
+* {
+  border-color: #deddd6;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #f7f7fa;
+  color: #18181b;
+  font-family: "PingFang SC", "Microsoft YaHei", "Noto Sans CJK SC", Inter, ui-sans-serif, system-ui, sans-serif;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: #dedcff;
+  color: #18181b;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+.hero-grid {
+  background-image:
+    linear-gradient(rgba(21, 37, 31, 0.055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(21, 37, 31, 0.055) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .float-slow { animation: float 6s ease-in-out infinite; }
+  .float-delay { animation: float 6s ease-in-out 1.5s infinite; }
+  .research-progress-sheen { animation: research-progress 1.8s ease-in-out infinite; }
+  .research-scene-enter { animation: research-scene-in 0.65s cubic-bezier(0.22, 0.8, 0.28, 1) both; }
+  .skilldock-chart-line { stroke-dasharray: 1; stroke-dashoffset: 1; animation: skilldock-chart-draw 0.9s cubic-bezier(0.22, 0.8, 0.28, 1) forwards; }
+  .skilldock-chart-point { animation: skilldock-chart-point-in 0.35s ease-out 0.65s both; }
+}
+
+@keyframes skilldock-chart-draw {
+  to { stroke-dashoffset: 0; }
+}
+
+@keyframes skilldock-chart-point-in {
+  from { opacity: 0; transform: scale(0.4); transform-origin: center; }
+  to { opacity: 1; transform: scale(1); transform-origin: center; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+@keyframes research-progress {
+  from { transform: translateX(-120%); }
+  to { transform: translateX(900%); }
+}
+
+@keyframes research-scene-in {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}

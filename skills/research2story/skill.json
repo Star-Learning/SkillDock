@@ -1,0 +1,13 @@
+{
+  "id": "research2story",
+  "displayName": "Research2Story",
+  "version": "1.0.0",
+  "category": "学术研究",
+  "summary": "调研并核验论文，为每篇论文提取真实主图，生成带旁白的 HTML 研究时间线。",
+  "status": "beta",
+  "source": "本地维护",
+  "tags": ["文献调研", "论文时间线", "主图提取", "HTML 动画"],
+  "compatibility": ["Codex"],
+  "requirements": ["Node.js 20+", "npm", "公开学术数据源网络"],
+  "testMode": "structure-and-trigger"
+}

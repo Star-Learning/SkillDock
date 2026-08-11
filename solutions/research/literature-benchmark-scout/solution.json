@@ -1,0 +1,12 @@
+{
+  "id": "literature-benchmark-scout",
+  "slug": "literature-benchmark-scout",
+  "stage": "draft",
+  "category": "research",
+  "implementationType": "agent",
+  "agentMode": "multi",
+  "title": "调研领域文献、Benchmark 与开源代码",
+  "summary": "围绕研究问题检索现有工作，整理方法谱系、代码底座和仍未解决的空位。",
+  "priority": "medium",
+  "source": "历史聊天：遥感 Benchmark 调研"
+}

@@ -1,0 +1,66 @@
+{
+  "id": "research2story",
+  "slug": "research2story",
+  "stage": "ready",
+  "category": "research",
+  "implementationType": "hybrid",
+  "title": "让 AI Agent 把论文调研做成带主图与旁白的时间轴动画",
+  "shortTitle": "Research2Story",
+  "summary": "下载方案包后交给本地 AI Agent，自动检索并核验论文、逐篇提取真实代表图，生成带时间轴与旁白的 HTML 研究动画。",
+  "delivery": {
+    "mode": "agent-local",
+    "version": "1.0.0",
+    "packageFileName": "research2story-v1.0.0.zip",
+    "agents": ["Codex"],
+    "requires": ["Node.js 20+", "npm", "可访问公开学术数据源的网络"]
+  },
+  "featured": true,
+  "featuredOrder": 2,
+  "verificationStatus": "partial",
+  "lastTested": "2026-08-10",
+  "difficulty": 2,
+  "setupMinutes": 2,
+  "recommendedStack": ["OpenAlex", "arXiv / ar5iv", "Next.js", "Browser Speech"],
+  "apps": ["OpenAlex", "arXiv", "浏览器", "Markdown"],
+  "toolSlugs": ["codex"],
+  "tags": ["文献调研", "研究脉络", "Storyboard", "学术科研"],
+  "aliases": ["research story", "文献综述", "论文时间线", "research2story"],
+  "icon": "route",
+  "accent": "green",
+  "repository": {
+    "type": "embedded",
+    "location": ".",
+    "note": "核心实现保存在当前解决方案目录，主应用只提供路由入口。"
+  },
+  "guide": {
+    "inputs": [
+      { "name": "研究主题", "description": "例如 AI Agent Memory，唯一必填项。", "required": true },
+      { "name": "时间范围", "description": "默认近 5 年，也可以自定义起止年份。", "required": false },
+      { "name": "输出语言", "description": "支持中文或 English。", "required": false }
+    ],
+    "usageSteps": [
+      { "title": "下载并解压方案包", "description": "完整方案包含 SKILL.md、执行脚本、本地界面和配置文件。" },
+      { "title": "使用 Codex 打开目录", "description": "把解压后的 research2story 文件夹作为一个本地工作区打开。" },
+      { "title": "复制任务指令", "description": "修改研究主题和时间范围后，把下方指令发送给 Codex。" },
+      { "title": "由 Agent 在本地执行", "description": "Agent 安装所需依赖、运行检索和主图提取，并把成果保存到 outputs/。" },
+      { "title": "查看本地成果", "description": "打开 research.md 或 index.html，检查论文来源、图片和时间线动画。" }
+    ],
+    "outputs": [
+      { "name": "research.md", "description": "包含阶段、路线、论文主图与已核验参考文献的报告。" },
+      { "name": "index.html", "description": "内嵌论文主图，沿时间轴自动播放并使用浏览器语音旁白的独立页面。" }
+    ],
+    "flow": [
+      { "title": "扩展检索", "description": "围绕主题建立多组查询" },
+      { "title": "筛选论文", "description": "优先高质量 Venue 与最新工作" },
+      { "title": "核验信息", "description": "检查作者、年份、DOI 与正式链接" },
+      { "title": "提取主图", "description": "逐篇识别并保存真实模型结构图、框架图或流程图" },
+      { "title": "梳理脉络", "description": "识别阶段、路线和代表论文" },
+      { "title": "生成故事", "description": "输出报告、Storyboard 与动画页面" }
+    ],
+    "prompt": {
+      "purpose": "也可以直接把需求交给 Codex 执行。",
+      "content": "请先阅读当前目录中的 SKILL.md，并使用 Research2Story 方案调研主题 <填写主题>。时间范围：<开始年份>—<结束年份>；输出语言：中文。请优先高质量 Venue，明确标记 arXiv 预印本，为每篇入选论文提取一张真实代表图，并把 research.md、storyboard.json 和可独立播放的 index.html 保存到 outputs/。"
+    }
+  },
+  "resources": []
+}

@@ -1,0 +1,7 @@
+{
+  "topic": "AI Agent Memory",
+  "startYear": 2022,
+  "endYear": 2026,
+  "language": "zh",
+  "expectedOutputs": ["research.md", "storyboard.json", "figures.json", "pics/", "index.html"]
+}
