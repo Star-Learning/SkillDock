@@ -9,7 +9,7 @@
 - `SKILL.md` 遵循 Agent Skills 结构：必需 `name`、`description`，可附带 `scripts/`、`references/`、`assets/` 和 `agents/openai.yaml`。
 - `.agents/skills/` 是 Codex 当前项目的安装目标，只能由安装/同步流程更新，不直接编辑。
 - `data/generated/skills.json` 与 `public/skills/` 是生成结果，不作为手工数据源。
-- 原 `solutions/` 仅作迁移参考，不再新增内容，也不是平台数据源。
+- 不再保留旧案例库与 `solutions/` 兼容层，所有正式内容统一进入 `skills/`。
 - `data/generated/skills.json` 是一次发布的只读快照。公开站点和 `/api/v1/*` 只读取该快照，不直接扫描或修改中央源码。
 - `/api/v1/*` 是公开只读与下载接口；`/api/local/*` 是维护者本地接口，仅允许服务绑定回环地址时启用。
 - 云端不部署 Agent，不提供在线编辑表单，也不把 `.agents/skills/` 当作公开状态。访客只能浏览公开 Skill、查看说明和下载。

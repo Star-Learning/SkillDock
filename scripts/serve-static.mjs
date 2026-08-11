@@ -134,10 +134,9 @@ function assertPublicEventRequest(request, eventId) {
 function normalizePublicPage(value, publicSkills) {
   if (typeof value !== "string") return undefined;
   const page = value === "/" ? "/" : `${value.replace(/\/+$/, "")}/`;
-  const allowed = new Set(["/", "/privacy/", "/skills/", "/cases/"]);
+  const allowed = new Set(["/", "/privacy/", "/skills/"]);
   for (const skill of publicSkills) {
     allowed.add(`/skills/${skill.id}/`);
-    allowed.add(`/case/${skill.id}/`);
   }
   return allowed.has(page) ? page : undefined;
 }
@@ -370,7 +369,7 @@ const server = createServer(async (request, response) => {
   try {
     let pathname;
     try {
-      pathname = decodeURIComponent(new URL(request.url || "/", "http://local.solution-center").pathname);
+      pathname = decodeURIComponent(new URL(request.url || "/", "http://skilldock.local").pathname);
     } catch {
       response.writeHead(400, securityHeaders);
       response.end("Bad Request");

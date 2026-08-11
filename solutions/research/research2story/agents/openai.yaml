@@ -1,4 +1,0 @@
-interface:
-  display_name: "Research2Story"
-  short_description: "在本地检索核验研究论文并生成带主图和旁白的时间轴动画"
-  default_prompt: "使用 $research2story 调研 AI Agent Memory，并在本地生成带论文主图和旁白的 HTML 时间轴。"
