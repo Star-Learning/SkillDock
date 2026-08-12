@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-08-11T14:09:23.776Z",
+  "generatedAt": "2026-08-12T15:46:22.920Z",
   "summary": {
-    "total": 4,
-    "installed": 0,
+    "total": 5,
+    "installed": 1,
     "needsSync": 0,
-    "passing": 4
+    "passing": 5
   },
   "targets": [
     {
@@ -12,7 +12,7 @@
       "name": "Codex · 当前项目",
       "path": ".agents/skills",
       "scope": "repository",
-      "installed": 0
+      "installed": 1
     }
   ],
   "skills": [
@@ -47,9 +47,9 @@
       "directory": "skills/drawio-paper-figure",
       "installTarget": ".agents/skills/drawio-paper-figure",
       "installStatus": "not-installed",
-      "sourceChecksum": "d804381e1074c17d42f35f0b3412edce9d6ead46d545fdd40a0e78bea7995d0d",
+      "sourceChecksum": "aba9df689b4520b74598315753c4625847d7a102ea39f7162481414200594feb",
       "fileCount": 8,
-      "sourceBytes": 19433,
+      "sourceBytes": 19784,
       "tests": {
         "status": "passed",
         "passed": 7,
@@ -97,8 +97,96 @@
       "package": {
         "fileName": "drawio-paper-figure-v1.0.0.zip",
         "path": "/skills/drawio-paper-figure/drawio-paper-figure-v1.0.0.zip",
-        "bytes": 11630,
-        "sha256": "de4dabd7d996ffd3d01742e7a8b9e2342a7bfd54786970ce2ee0a27c013d477d"
+        "bytes": 11709,
+        "sha256": "dafb95b73ae7df000d9bd1453052bc5dd7fc190d08c912c65396abf3b6632a3c"
+      }
+    },
+    {
+      "id": "literature-meeting-ppt",
+      "displayName": "中文组会论文汇报 PPT",
+      "version": "1.0.0",
+      "category": "学术研究",
+      "summary": "按统一蓝灰学术主题组织中文论文汇报，保留学术英文原貌，用关键 Figure 和中文解释讲清研究逻辑，并通过固定版式保证整套 PPT 风格一致。",
+      "status": "stable",
+      "source": "本地维护",
+      "tags": [
+        "论文汇报",
+        "组会",
+        "PPT",
+        "学术汇报",
+        "Figure",
+        "Motivation",
+        "Challenge",
+        "Solution",
+        "风格一致性",
+        "模板"
+      ],
+      "compatibility": [
+        "Codex"
+      ],
+      "requirements": [
+        "论文原文或可靠论文资料",
+        "可访问论文 Figure、项目页或代码页时优先",
+        "本地文件读写权限"
+      ],
+      "testMode": "structure-and-trigger",
+      "name": "literature-meeting-ppt",
+      "description": "面向中文科研组会和中文导师论文汇报，将一篇或多篇学术论文整理成中文为主、英文术语保真的 PPT 内容与页面结构，并用固定主题、字号层级、16:9 网格、页眉页脚和页面模板保持整套幻灯片风格一致。用于制作、改写、审阅论文汇报、文献组会、paper presentation、literature meeting 或学术汇报幻灯片，尤其适用于需要保留论文原始标题/模型/数据集/会议名称、围绕 Motivation→Challenge→Solution 讲清楚方法、优先使用论文原图并加入中文解释和汇报者判断的任务；不用于论文 Related Work 写作、公众号文章或脱离论文证据的研究结论生成。",
+      "directory": "skills/literature-meeting-ppt",
+      "installTarget": ".agents/skills/literature-meeting-ppt",
+      "installStatus": "current",
+      "sourceChecksum": "6aec6a4951974dd8143359a4f412f5cfacda33f3781cab2bfc7ac4e05ee3f614",
+      "fileCount": 5,
+      "sourceBytes": 17735,
+      "tests": {
+        "status": "passed",
+        "passed": 7,
+        "total": 7,
+        "promptCases": 15,
+        "checks": [
+          {
+            "id": "metadata",
+            "label": "平台元数据",
+            "passed": true
+          },
+          {
+            "id": "skill-file",
+            "label": "SKILL.md",
+            "passed": true
+          },
+          {
+            "id": "name",
+            "label": "名称一致",
+            "passed": true
+          },
+          {
+            "id": "description",
+            "label": "触发描述",
+            "passed": true
+          },
+          {
+            "id": "version",
+            "label": "语义化版本",
+            "passed": true
+          },
+          {
+            "id": "trigger-cases",
+            "label": "触发测试样例",
+            "passed": true,
+            "count": 15
+          },
+          {
+            "id": "security",
+            "label": "文件安全扫描",
+            "passed": true
+          }
+        ]
+      },
+      "package": {
+        "fileName": "literature-meeting-ppt-v1.0.0.zip",
+        "path": "/skills/literature-meeting-ppt/literature-meeting-ppt-v1.0.0.zip",
+        "bytes": 10792,
+        "sha256": "b3285bcd1b8b9cb56c3f0314105c456b4c6c3ff59060cd7358df0d6ca9ba8cfb"
       }
     },
     {
@@ -131,9 +219,9 @@
       "directory": "skills/literature-related-work",
       "installTarget": ".agents/skills/literature-related-work",
       "installStatus": "not-installed",
-      "sourceChecksum": "54d5a4a25459333e80c03ec39279ace7b544eb3373decc37f8ab55f347cd73b1",
+      "sourceChecksum": "848d2b97c4833f98397e058f0e88a62e7c766047bac0b55bf799977b85e64005",
       "fileCount": 6,
-      "sourceBytes": 19127,
+      "sourceBytes": 19438,
       "tests": {
         "status": "passed",
         "passed": 7,
@@ -181,8 +269,8 @@
       "package": {
         "fileName": "literature-related-work-v1.0.0.zip",
         "path": "/skills/literature-related-work/literature-related-work-v1.0.0.zip",
-        "bytes": 10419,
-        "sha256": "6f9c402bf0b8fd2ade9dbc7522f684c08e36a6c58bc696eb53345f4e106e9d84"
+        "bytes": 10454,
+        "sha256": "a0999352aa5510651422da2ea9514952714326903a5c61d66710bdec50116ed0"
       }
     },
     {
@@ -212,9 +300,9 @@
       "directory": "skills/paper-wechat-article-generator",
       "installTarget": ".agents/skills/paper-wechat-article-generator",
       "installStatus": "not-installed",
-      "sourceChecksum": "9b102d2f37f2bb3649ea1192bba8bc56879e3f685b16ab30304cc7f8ed8f9fd2",
+      "sourceChecksum": "702f36f779860bcbc5ef4ef27ae7c5602ce1e00a0487160478b57a6862c3e2ed",
       "fileCount": 4,
-      "sourceBytes": 23601,
+      "sourceBytes": 24266,
       "tests": {
         "status": "passed",
         "passed": 7,
@@ -262,8 +350,8 @@
       "package": {
         "fileName": "paper-wechat-article-generator-v1.0.0.zip",
         "path": "/skills/paper-wechat-article-generator/paper-wechat-article-generator-v1.0.0.zip",
-        "bytes": 11525,
-        "sha256": "8f52961408b154b77fd74969f0ccde7728c0d2c08a55e65f304e6517ddb34358"
+        "bytes": 11594,
+        "sha256": "d3ed3e248b5afd5370423bcd1a15353ad7b61fed2df7e355dd32568d3c0e8567"
       }
     },
     {
@@ -294,9 +382,9 @@
       "directory": "skills/research2story",
       "installTarget": ".agents/skills/research2story",
       "installStatus": "not-installed",
-      "sourceChecksum": "c51cdbb49c5a8667de1ebb8f10898694d163a1e555833b0d031ea5733179004a",
+      "sourceChecksum": "18cdad247461cacb0a253009bee6b0b432b1f993d24fadb5269f8d19d4665228",
       "fileCount": 23,
-      "sourceBytes": 127879,
+      "sourceBytes": 130749,
       "tests": {
         "status": "passed",
         "passed": 7,
@@ -344,8 +432,8 @@
       "package": {
         "fileName": "research2story-v1.0.0.zip",
         "path": "/skills/research2story/research2story-v1.0.0.zip",
-        "bytes": 49393,
-        "sha256": "1bce799e5b23c2a85141732929c6ef043b01f4bd59a895e9919adbd1ba290ab7"
+        "bytes": 49596,
+        "sha256": "cfa8ad0499191c550841b78dbe0231582503a9ebf1a89753bbc1caad174f9ae9"
       }
     }
   ]

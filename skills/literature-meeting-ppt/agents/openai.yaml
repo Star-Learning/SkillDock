@@ -1,0 +1,4 @@
+interface:
+  display_name: "中文组会论文汇报 PPT"
+  short_description: "用统一蓝灰学术主题制作中文论文汇报 PPT"
+  default_prompt: "使用 $literature-meeting-ppt 把这几篇论文整理成风格统一的中文组会汇报 PPT，锁定统一主题、字号和版式，保留论文英文原貌，突出 Motivation、Challenge、Solution、关键 Figure 和我的理解。"

@@ -1,0 +1,21 @@
+{
+  "positive": [
+    "把这篇遥感分割论文整理成中文组会 PPT，保留论文英文标题和模型名，按 Motivation、Challenge、Solution 讲清楚，并优先使用原论文 Figure",
+    "使用 literature-meeting-ppt 帮我做一个面向中文导师的 paper presentation，每张重要 Figure 旁边加 1-3 条中文解释和来源",
+    "把这三篇 Vision-Language Model 论文整理成组会汇报，比较它们的核心机制、局限和 Research Gap，最后给出我的研究想法",
+    "帮我审阅这份论文汇报 PPT：检查是否整套英文、是否把模型名翻译错、是否只放图不解释，以及是否区分了作者结论和我的分析",
+    "为一篇方法复杂的论文设计汇报页面，重点展示 Overall Architecture、输入输出关系、关键 Ablation 和中文 Key Takeaway",
+    "把论文的 Research Ideas 部分改成中文为主的 Gap 到 Idea 逻辑，同时保留 Memory-Augmented Segmentation Agent 这类研究方向名称",
+    "以后每次生成论文组会 PPT 都沿用同一套蓝灰主题、字号层级、页眉页脚和方法图版式，不要每页换风格",
+    "把这份已有组会 PPT 改成统一风格：固定 16:9 网格、颜色令牌、标题层级和原图槽位，并渲染检查是否溢出"
+  ],
+  "negative": [
+    "帮我写一段气象降尺度 Related Work 并附真实 BibTeX",
+    "把这篇论文改写成适合微信公众号发布的科普文章",
+    "凭空生成一个不存在的模型架构图和实验结果",
+    "只解释 Transformer 是什么，不需要结合具体论文做组会汇报",
+    "帮我写一份与论文汇报无关的实验日志分析",
+    "每一页都换一种配色和模板，做成视觉风格完全不一致的演示文稿",
+    "不看论文内容，只凭空设计一套营销路演风格的商业 PPT"
+  ]
+}

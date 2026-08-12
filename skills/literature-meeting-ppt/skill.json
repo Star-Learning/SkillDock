@@ -1,0 +1,13 @@
+{
+  "id": "literature-meeting-ppt",
+  "displayName": "中文组会论文汇报 PPT",
+  "version": "1.0.0",
+  "category": "学术研究",
+  "summary": "按统一蓝灰学术主题组织中文论文汇报，保留学术英文原貌，用关键 Figure 和中文解释讲清研究逻辑，并通过固定版式保证整套 PPT 风格一致。",
+  "status": "stable",
+  "source": "本地维护",
+  "tags": ["论文汇报", "组会", "PPT", "学术汇报", "Figure", "Motivation", "Challenge", "Solution", "风格一致性", "模板"],
+  "compatibility": ["Codex"],
+  "requirements": ["论文原文或可靠论文资料", "可访问论文 Figure、项目页或代码页时优先", "本地文件读写权限"],
+  "testMode": "structure-and-trigger"
+}
