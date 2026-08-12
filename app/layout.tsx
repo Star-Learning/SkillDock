@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import "./globals.css";
-import { SiteAnalytics } from "@/components/analytics/SiteAnalytics";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 
@@ -23,5 +22,5 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: Readonly<{ children: ReactNode }>) {
-  return <html lang="zh-CN"><body className="min-h-screen antialiased"><SiteAnalytics /><Header /><main>{children}</main><Footer /></body></html>;
+  return <html lang="zh-CN"><body className="min-h-screen antialiased"><Header /><main>{children}</main><Footer /></body></html>;
 }

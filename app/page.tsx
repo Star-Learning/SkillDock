@@ -1,5 +1,4 @@
 import { ArrowRight, Bot, ShieldCheck } from "lucide-react";
-import { SiteLiveSummary } from "@/components/analytics/SiteLiveSummary";
 import { SkillLibrary } from "@/components/skills/SkillLibrary";
 import { skillRegistry, skills } from "@/data/skills";
 
@@ -36,7 +35,6 @@ export default function HomePage() {
               <HeroStat value={skillRegistry.summary.passing} label="检查通过" />
               <HeroStat value={skills.filter((skill) => skill.status === "stable").length} label="稳定版本" />
             </div>
-            <SiteLiveSummary />
           </div>
         </div>
       </section>

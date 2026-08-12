@@ -16,8 +16,6 @@
     "pretypecheck": "node scripts/sync-skills.mjs",
     "prebuild": "node scripts/sync-skills.mjs",
     "build": "next build",
-    "start": "node scripts/serve-static.mjs",
-    "preview": "node scripts/serve-static.mjs",
     "check": "npm run lint && npm run typecheck && npm run build",
     "lint": "eslint . --ext .js,.mjs,.ts,.tsx --max-warnings=0",
     "typecheck": "tsc --noEmit"

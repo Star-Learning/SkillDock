@@ -2,10 +2,8 @@ import type { Metadata } from "next";
 import { ArrowLeft, Check, CheckCircle2, Download, FileCode2, FolderSync, PackageCheck, ShieldCheck, Sparkles, TestTube2 } from "lucide-react";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { SkillActivitySummary } from "@/components/skills/SkillActivitySummary";
 import { getSkillVisual } from "@/components/skills/skill-visual";
 import { getSkill, skills } from "@/data/skills";
-import { skillDownloadUrl } from "@/lib/skills/public-api";
 
 export const dynamic = "force-static";
 
@@ -37,10 +35,9 @@ export default async function SkillDetailPage({ params }: { params: Promise<{ sl
       <span className={`absolute inset-x-0 top-0 h-1 ${visual.accentBar}`} />
       <div className="grid gap-8 p-6 sm:p-8 lg:grid-cols-[1fr_auto] lg:items-start">
         <div><div className="flex items-start gap-4"><span className={`mt-0.5 flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl ${visual.iconSurface}`}><CategoryIcon className="h-6 w-6" strokeWidth={1.8} /></span><div><div className="flex flex-wrap items-center gap-2"><span className={`rounded-full px-2.5 py-1 text-xs font-medium ${visual.categoryBadge}`}>{skill.category}</span><span className="rounded-full bg-paper px-2.5 py-1 text-xs text-ink/45">{skill.status === "stable" ? "稳定版" : "Beta"}</span><span className="rounded-full bg-paper px-2.5 py-1 text-xs text-ink/45">v{skill.version}</span></div><h1 className="mt-4 text-4xl font-semibold tracking-[-0.055em] text-ink sm:text-5xl">{skill.displayName}</h1><p className="mt-2 font-mono text-sm text-ink/35">{skill.name}</p></div></div><p className="mt-6 max-w-3xl text-base leading-8 text-ink/58">{skill.summary}</p></div>
-        <div className="flex flex-wrap gap-2"><a href={skillDownloadUrl(skill.id)} data-track-skill={skill.id} className={`inline-flex h-11 items-center gap-2 rounded-full px-5 text-sm font-semibold text-white transition ${visual.button}`}><Download className="h-4 w-4" />免费下载 ZIP</a></div>
+        <div className="flex flex-wrap gap-2"><a href={skill.package.path} download className={`inline-flex h-11 items-center gap-2 rounded-full px-5 text-sm font-semibold text-white transition ${visual.button}`}><Download className="h-4 w-4" />免费下载 ZIP</a></div>
       </div>
       <div className="grid border-t border-line sm:grid-cols-2 lg:grid-cols-4"><HeaderStat icon={PackageCheck} label="发布状态" value="可下载" /><HeaderStat icon={TestTube2} label="测试结果" value={`${skill.tests.passed}/${skill.tests.total} 通过`} /><HeaderStat icon={FileCode2} label="文件数量" value={`${skill.fileCount} 个`} /><HeaderStat icon={FolderSync} label="适用环境" value={skill.compatibility.join("、")} /></div>
-      <SkillActivitySummary skillId={skill.id} variant="header" />
     </header>
 
     <div className="mt-6 grid gap-6 lg:grid-cols-[minmax(0,1fr)_340px]">
