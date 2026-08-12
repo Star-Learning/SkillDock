@@ -38,7 +38,7 @@ NEXT_PUBLIC_SITE_URL=https://你的Worker名称.你的账户子域名.workers.de
 pnpm install
 pnpm run skills:test
 pnpm run skills:sync
-pnpm run build
+pnpm  run build
 ```
 
 网站是 Next.js 静态导出项目，构建结果由 Cloudflare Workers 从 `out/` 发布。网站不收集页面浏览、点击或下载计数，ZIP 文件直接作为静态资源提供。
