@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Cloudflare Pages serves the generated files directly.
+  // Cloudflare Workers serves the generated files from the configured assets directory.
   output: "export",
   trailingSlash: true,
 };
